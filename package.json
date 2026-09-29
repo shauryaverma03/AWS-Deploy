@@ -7,9 +7,14 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:restart": "pm2 restart aws-app",
+    "pm2:stop": "pm2 stop aws-app",
+    "pm2:logs": "pm2 logs aws-app"
   },
   "dependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "pm2": "^7.0.4"
   }
 }
